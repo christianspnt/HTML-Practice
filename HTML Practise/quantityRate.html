@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>Quantity Rate</title>
+        <script language="JavaScript">
+            function compute()
+            {
+                var quan = parseFloat(document.prodSum.quan.value);
+                var price = parseFloat(document.prodSum.price.value);
+                var totalPrice = quan * price;
+
+                if(document.prodSum.quan.value>=15) {
+                    var disAmount = price * .07;
+                    document.prodSum.disAmount.value = disAmount.toFixed(2);
+                    var netPay = totalPrice - disAmount;
+                    document.prodSum.netPay.value = netPay.toFixed(2);
+                }
+                else if(document.prodSum.quan.value>=10){
+                    var disAmount = price * .05;
+                    document.prodSum.disAmount.value = disAmount.toFixed(2);
+                    var netPay = totalPrice - disAmount;
+                    document.prodSum.netPay.value = netPay.toFixed(2);
+                }
+                else if(document.prodSum.quan.value>=5){
+                    var disAmount = price * .03;
+                    document.prodSum.disAmount.value = disAmount.toFixed(2);
+                    var netPay = totalPrice - disAmount;
+                    document.prodSum.netPay.value = netPay.toFixed(2);
+                }
+                else {
+                    var disAmount = price * .01;
+                    document.prodSum.disAmount.value = disAmount.toFixed(2);
+                    var netPay = totalPrice - disAmount;
+                    document.prodSum.netPay.value = netPay.toFixed(2);
+                }
+            }
+        </script>
+        <style>
+            table {
+                background-color: blue;
+                margin: 100px;
+                padding: 15px 25px;
+                color: white;
+                font-family: 'Century Gothic';
+                font-size: 22px;
+                
+            }
+            
+            .length {
+                width: 200px;
+                margin-left: 10px;
+            }
+
+            .paraAline {
+                margin-left: 10px;
+            }
+
+            th {
+                padding-bottom: 15px;
+                font-size: 27px;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <form name="prodSum">
+                <table cellpadding="3">
+                    <tr>
+                        <th colspan="2">My Product</th>
+                    </tr>
+                    <tr>
+                        <td>Product number: </td>
+                        <td><input class="length" type = "text" value = " " name="prodNum"></td>
+                    </tr>
+                    <tr>
+                        <td>Product name: </td>
+                        <td><input class="length" type = "text" value = " " name="prodName"></td>
+                    </tr>
+                    <tr>
+                        <td>Quantity: </td>
+                        <td><input class="length" type = "text" value = " " name="quan"></td>
+                    </tr>
+                    <tr>
+                        <td>Unit Price: </td>
+                        <td><input class="length" type = "text" value = " " name="price"></td>
+                    </tr>
+                    <tr>
+                        <td>Discount Amount: </td>
+                        <td><input class="length" type = "text" value = " " name="disAmount"></td>
+                    </tr>
+                    <tr>
+                        <td>Net Pay: </td>
+                        <td><input class="length" type = "text" value = " " name="netPay"></td>
+                    </tr>
+                    <tr>
+                        <td><input type = "button" value="Calculate" onClick ="compute()" color="blue"></td>
+                        <td><input class="paraAline" type = "reset" value="Clear" ></td>
+                    </tr>
+                </table>
+            </form>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>My Payroll</title>
+        <script language="JavaScript">
+            function calculate()
+            {
+                var hourWork = parseFloat(document.Salary.hourWork.value);
+                var RPHour = parseFloat(document.Salary.RPHour.value);
+                var BSalary = hourWork * RPHour * 26; 
+                document.Salary.BSalary.value = BSalary.toFixed(2);
+                //assume that your working days in a month is equal to 26 days
+
+                if(BSalary <= 50000){
+                    var Tax = BSalary * .10;
+                    document.Salary.Tax.value = Tax.toFixed(2);
+                    var grossPay = BSalary - Tax;
+                    document.Salary.grossPay.value = grossPay.toFixed(2);
+                }
+                else if(BSalary>50000 && BSalary<=100000){
+                    var Tax = (BSalary * .15) + 5000;
+                    document.Salary.Tax.value = Tax.toFixed(2);
+                    var grossPay = BSalary - Tax;
+                    document.Salary.grossPay.value = grossPay.toFixed(2);
+                }
+                else if(BSalary>100000 && BSalary<=200000){
+                    var Tax = (BSalary * .20) + 15000;
+                    document.Salary.Tax.value = Tax.toFixed(2);
+                    var grossPay = BSalary - Tax;
+                    document.Salary.grossPay.value = grossPay.toFixed(2);
+                }
+                else {
+                    var Tax = BSalary * .25;
+                    document.Salary.Tax.value = Tax.toFixed(2);
+                    var grossPay = BSalary - Tax;
+                    document.Salary.grossPay.value = grossPay.toFixed(2);
+                }
+            }
+        </script>
+        <style>
+            table {
+                background-color: black;
+                margin: 100px;
+                padding: 15px 25px;
+                color: white;
+                font-family: 'Century Gothic';
+                font-size: 22px;
+                
+            }
+            
+            .length {
+                width: 200px;
+                margin-left: 10px;
+            }
+
+            .paraAline {
+                margin-left: 10px;
+            }
+
+            th {
+                padding-bottom: 15px;
+                font-size: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <form action="Salary">
+                <table cellpadding="3">
+                    <tr>
+                        <th colspan="2">My Payroll</th>
+                    </tr>
+                    <tr>
+                        <td>Employee Number: </td>
+                        <td><input class="length" type = "text" value = " " name="ENumber"></td>
+                    </tr>
+                    <tr>
+                        <td>Employee Name: </td>
+                        <td><input class="length" type = "text" value = " " name="EName"></td>
+                    </tr>
+                    <tr>
+                        <td>Hours work</td>
+                        <td><input class="length" type = "text" value = " " name="hourWork"></td>
+                    </tr>
+                    <tr>
+                        <td>Rate/hour</td>
+                        <td><input class="length" type = "text" value = " " name="RPHour"></td>
+                    </tr>
+                    <tr>
+                        <td>Basic Salary:</td>
+                        <td><input class="length" type = "text" value = " " name="BSalary"></td>
+                    </tr>
+                    <tr>
+                        <td>Withholding Tax</td>
+                        <td><input class="length" type = "text" value = " " name="Tax"></td>
+                    </tr>
+                    <tr>
+                        <td>Gross Pay</td>
+                        <td><input class="length" type = "text" value = " " name="grossPay"></td>
+                    </tr>
+                    <tr>
+                        <td><input type = "button" value="Calculate" onClick ="calculate()"></td>
+                        <td><input class="paraAline" type = "reset" value="Clear" ></td>
+                    </tr>
+                </table>
+            </form>
+        </center>
+    </body>
+</html>

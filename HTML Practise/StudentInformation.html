@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Student Information</title>
+        <script>
+            function compute(){
+                var TRate = parseFloat(document.CalTuition.TRate.value);
+                var Units = parseFloat(document.CalTuition.Units.value);
+
+                var Tuition = TRate * Units;
+                document.CalTuition.Tuition.value = Tuition.toFixed(2);
+            }
+        </script>
+        <style>
+            label {
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            input, textarea, select {
+                width: 15%;
+                margin: 1px 0 15 0;
+                min-height: 2em;
+            }
+
+            .inline {
+                width: unset;
+                margin: -10 0.5em -9 13;
+                vertical-align: middle;
+            }
+
+            input[type="button"] {
+                width: 8%; 
+            }
+
+            .space {
+                margin-top: 27px;
+            }
+
+            p {
+                margin: -10 0.5em -9 0;
+                font-size: 17px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Student Information</h1>
+        <form name="CalTuition">
+                <label for="username">Username: <br><input type="text" required></label>
+                <label for="password">Password: <br><input type="password" required></label>
+                <label for="last-name">Last Name: <br><input type="text" required></label>
+                <label for="first-name">First Name: <br><input type="text" required></label>
+                <label for="course-list">Course (List): <br> 
+                    <select name="Course" id="course-list" required>
+                        <option value="">(select one)</option>
+                        <option value="1">Information System</option>
+                        <option value="2">Information Technology</option>
+                        <option value="3">Computer Science</option>
+                        <option value="4">Computer Engineering</option>
+                        <option value="5">Cybersecurity</option>
+                    </select>
+                </label>
+                <p>Gender:</p>
+                <label for="male-gender"><input class="inline" name="gender" type="radio" checked required>Male</label>
+                <label for="female-gender"><input class="inline" name="gender" type="radio" required>Female</label>
+                <p class="space">Skills:</p>
+                <label for=""><input class="inline" type="checkbox" name="Skills" required>Web Designing </label>
+                <label for=""><input class="inline" type="checkbox" name="Skills" required>Front-end Developing </label>
+                <label for=""><input class="inline" type="checkbox" name="Skills" required>Back-end Developing </label>
+                <label for=""><input class="inline" type="checkbox" name="Skills" required>UI Designing </label>
+                <label for=""><input class="inline" type="checkbox" name="Skills" required>UX designing </label>
+                <label for="tuition-rate" class="space" >Tuition Rate: <br> <input type="text" value=" " name="TRate" required></label>
+                <label for="unit-taken">Units Taken: <br> <input type="text" name="Units" value=" " required></label>
+                <label for="tuition">Tuition: <br> <input type="text" value=" " name="Tuition" ></label>
+                <input type="button" value="Calculate Tuition"  onClick="compute()">
+        </form>
+    </body>
+</html>

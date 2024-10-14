@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Survey Form</title>
+        <link href="SurveyStyles.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Thank you for taking the time to take this survey</p>
+        <form id="survey-form">
+            <fieldset>
+                <label id="name-label">Name: <input required id="name" type="text" placeholder="Enter Your Name"></label>
+                <label id="email-label">Email: <input required id="email" type="email" minlength="8" placeholder="Enter Your Email"></label>
+                <label id="contact-number-label">Contact Number <span>(optional)</span>: <input id="contact-number" type="number" maxlength="11" placeholder="Contact Number"></label>
+                <label id="number-label">Age <span>(optional)</span>: <input id="number" type="number" min="18" max="120" placeholder="Age"></label>
+            </fieldset>
+            <fieldset>
+                <label>What is your current occupation?
+                    <select id="dropdown">
+                        <option value="">(select one)</option>
+                        <option value="1">Student</option>
+                        <option value="2">Professional</option>
+                        <option value="3">An Idler</option>
+                    </select>
+                </label>
+                <label class="nextLabel">Are you contented with what you have right now?</label>
+                <label><input class="inline" type="radio" value="definitely" name="choices" checked> Definitely</label>
+                <label><input class="inline" type="radio" value="somewhat" name="choices" > Somewhat</label>
+                <label><input class="inline" type="radio" value="not-sure" name="choices" > Not sure</label>
+                <label class="nextLabel">Where do you see yourself 5 years from now?
+                    <select id="dropdownII">
+                        <option value="">(select one)</option>
+                        <option value="1">Working on my dream job</option>
+                        <option value="2">Hustling</option>
+                        <option value="3">Building a family</option>
+                        <option value="4">Traveling</option>
+                        <option value="5">Just living/enjoying</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <label>What are your main interests or hobbies? <span>(Check all that apply)</span></label>
+                <label><input class="inline" type="checkbox" value="Reading"> Reading</label>
+                <label><input class="inline" type="checkbox" value="Writing"> Writing</label>
+                <label><input class="inline" type="checkbox" value="Arts-Creativity"> Arts & Creativity <span>(e.g., drawing, painting, etc.)</span></label>
+                <label><input class="inline" type="checkbox" value="Musical-Instrument"> Playing a Musical Instrument <span>(e.g., guitar, piano, etc.)</span></label>
+                <label><input class="inline" type="checkbox" value="Singing"> Singing</label>
+                <label><input class="inline" type="checkbox" value="Dancing"> Dancing</label>
+                <label><input class="inline" type="checkbox" value="Cooking-Baking"> Cooking/Baking</label>
+                <label><input class="inline" type="checkbox" value="Hike-Trek-Camp"> Hiking/Trekking & Camping </label>
+                <label><input class="inline" type="checkbox" value="Sports"> Playing Sports <span>(e.g., basketball, soccer, etc.)</span></label>
+                <label><input class="inline" type="checkbox" value="Traveling"> Traveling</label>
+                <label><input class="inline" type="checkbox" value="Collecting"> Collecting <span>(e.g., stamps, coins, etc.)</span></label>
+                <label><input class="inline" type="checkbox" value="Board-Games"> Board Games</label>
+                <label><input class="inline" type="checkbox" value="Yoga-Meditation"> Yoga/Meditation</label>
+                <label><input class="inline" type="checkbox" value="DIY-Crafts"> DIY Crafts</label>
+                <label class="nextLabel">If you had a day entirely to yourself, how would you choose to spend it?<textarea rows="3" cols="30" placeholder="If I had an entire day by myself, I would spend it..."></textarea></label>
+                <input type="submit" id="submit" value="Submit">
+            </fieldset>
+        </form>
+    </body>
+</html>

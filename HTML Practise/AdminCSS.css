@@ -1,0 +1,215 @@
+:root {
+    --main-color: #fb6f92;
+    --nav-color: #ff8fab;
+    --bg-color: #ffb3c6;
+    --black: #ffc2d1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all .5s ease-in;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    background-color: var(--main-color);
+    color: #fff;
+    font-size: 1.7rem;
+    padding: .8rem 2.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.btn:hover {
+    letter-spacing: .1rem;
+}
+
+.header {
+   background-color: var(--nav-color); 
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1.5rem 7%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 14vh;
+   /* z-index: 1000; */
+}
+
+.header .logo img {
+    height: 7rem;
+    border-radius: 50%;
+}
+
+.header .navbar a{
+    color: #ffe5ec;
+    font-size: 1.8rem;
+    margin: 0 1rem;
+}
+
+.header .navbar a:hover {
+    color: var(--black);
+    border-top: .2rem solid var(--black);
+    border-bottom: .2rem solid var(--black);
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+}
+
+.header .icons {
+    display: flex;
+}
+
+.header .icons div {
+    color: #ffe5ec;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+.header .icons div:hover{
+    color: var(--black);
+}
+
+.header .icons .menu-icon {
+    display: none;
+}
+
+.header .search-form {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 118%;
+    right: -100%;
+    width: 40rem;
+    height: 4.5rem;
+    background-color: #fff;
+    
+}
+
+.header .search-form.active {
+    right: 7%;
+}
+
+.header .search-form input {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+}
+
+.header .search-form label {
+    color: var(--black);
+    font-size: .9rem;
+    padding-right: 1.6rem;
+    cursor: pointer;
+}
+
+.header .search-form label:hover {
+    color: var(--main-color);
+}
+
+.header .cart-items-container {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 35rem;
+    background-color: var(--bg-color);
+    height: 80vh;
+    border: solid 1px white;
+    padding: .8rem;
+}
+
+.header .cart-items-container.active{
+    right: 0;
+}
+
+.header .cart-items-container .cart-item {
+    display: flex;
+    align-items: center;
+    margin: 1.3rem 0;
+    /* border: solid 1px white; */
+    position: relative;
+    gap: 1rem;
+}
+
+.header .cart-items-container a {
+    width: 100%;
+}
+
+.header .cart-items-container .cart-item img {
+    width: 6rem;
+}
+
+.header .cart-items-container .cart-item span {
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    font-size: 2rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header .cart-items-container .cart-item span:hover {
+    color: var(--main-color);
+}
+
+.header .cart-items-container .cart-item .content h3 {
+    font-size: 1.8rem;
+    color: white;
+    padding-bottom: .5rem;
+}
+
+.header .cart-items-container .cart-item .price {
+    font-size: 1.2rem;
+    color: var(--main-color);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 84vh; /* for pic*/
+    margin-top: 14vh;
+    background-color: white;
+    background-image: url("/HTML\ Practise/Pictures/macaroon.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+
+}
+
+.home .hero {
+    width: 60rem;
+}
+
+.home .hero h3 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fb6f92;
+}
+
+.home .hero p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 3rem;
+    padding: 1rem 0;
+    color: #eee;
+}

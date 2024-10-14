@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title> Average </title>
+    <script language = "JavaScript">
+        function compute()
+        {
+	        document.frmAdd.ave.value=(parseFloat(document.frmAdd.eng.value)+parseFloat(document.frmAdd.math.value)+parseFloat(document.frmAdd.sci.value))/3.0;
+            if(document.frmAdd.ave.value>75)
+                alert("PASSED");
+            else
+                alert("FAILED");
+        }
+    </script>
+</head>
+<body>
+	<form name = "frmAdd">
+	<table>
+		<font size = 7 face = "Century Gothic">
+		<tr align = "center"> 
+            <marquee> Calculate the Average<br> </marquee>
+        </tr>
+		<tr>
+		    <td><font size = 5 face = "Century Gothic"> English </font> </td>
+		    <td><input type = "text" value = " " name="eng"></td>
+		</tr>
+		<tr>
+			<td><font size = 5 face = "Century Gothic"> Math </font> </td>
+			<td><input type = "text" value = " " name="math"></td>
+		</tr>
+		<tr>
+			<td><font size = 5 face = "Century Gothic"> Science </font> </td>
+			<td><input type = "text" value = " " name="sci"></td>
+		</tr>
+        <tr>
+            <td><font size= 5 face="Century Gothic">Average</font> </td>
+            <td><input type="text" value=" " name="ave"></td>
+        </tr>
+		<tr>
+			<td><input type = "button" value="Compute Average" onClick ="compute()" color="blue"></td>
+			<td><input type = "reset" value="Clear"></td>
+		</tr>
+</body>
+</html>

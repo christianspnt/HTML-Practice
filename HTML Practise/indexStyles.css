@@ -1,0 +1,67 @@
+h1 {
+    text-align: center;
+}
+
+.container {
+    padding: 10px 0 10px 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.marker {
+    height: 25px;
+    width: 200px;
+    margin: 10px auto;
+}
+
+.cap {
+    width: 60px;
+    height: 25px;
+}
+
+.sleeve {
+    width: 110px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 50%);
+    border-left: 10px double rgba(0, 0, 0, 75%);
+}
+
+.cap, .sleeve {
+    display: inline-block;
+}
+
+/* You may already be familiar with decimal, 
+or base 10 values, which go from 0 - 9. Hexadecimal, 
+or base 16 values, go from 0 - 9, then A - F:
+
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+
+With hex colors, 00 is 0% of that color, and FF is 100%. 
+So #00FF00 translates to 0% red, 100% green, and 0% blue, 
+and is the same as rgb(0, 255, 0). 
+*/
+
+/* syntax for shadow effect:
+    box-shadow: offsetX offsetY blurRadius color; 
+    example is in the .green CCS rule
+    box-shadow: 5px 5px 5px green;
+*/
+
+/*syntax for EXPANDING shadow effect:
+    box-shadow: offsetX offsetY blurRadius spreadRadius color;
+    example is in .blue CSS rule
+*/
+
+.red {
+    background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+}
+
+.green {
+    background: linear-gradient(#55680D, #71F53E, #116C31);
+    box-shadow: 0 0 20px 0 #3B7E20CC;
+}
+
+.blue {
+    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+    box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+}
